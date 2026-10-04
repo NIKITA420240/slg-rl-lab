@@ -1,0 +1,6 @@
+defaults:
+  - model: yolo
+  - _self_
+
+source: C:\Users\Samoylov_Nikita\Documents\slg-rl-lab\data\albion_detector\test\images\_7bc6d0b6-ed5f-48d9-b0a7-4fb620ddc822_png.rf.082bbfb95874fc401469498e83a6da39.jpg
+output: outputs/perception

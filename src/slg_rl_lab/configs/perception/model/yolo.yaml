@@ -1,0 +1,5 @@
+name: yolo
+model_path: yolo11n.pt
+device: cpu
+confidence: 0.25
+image_size: 640

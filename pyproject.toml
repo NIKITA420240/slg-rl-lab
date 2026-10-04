@@ -1,0 +1,20 @@
+[project]
+name = "slg-rl-lab"
+version = "0.1.0"
+description = "Albion perception and agent experiments"
+requires-python = ">=3.11"
+dependencies = [
+    "ultralytics",
+    "numpy",
+    "hydra-core",
+    "omegaconf",
+    "loguru",
+    "pillow",
+]
+
+[project.scripts]
+perception-infer = "slg_rl_lab.cli.inference:run_cli"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13"]
+build-backend = "uv_build"
