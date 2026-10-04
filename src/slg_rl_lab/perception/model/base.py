@@ -14,3 +14,9 @@ class PerceptionModel(ABC):
             The predicted output.
         """
         raise NotImplementedError("The 'predict' method must be implemented in subclasses of PerceptionModel.")
+
+    def train(self, cfg):
+        """
+        """
+
+        raise NotImplementedError("The 'train' method must be implemented in subclasses of PerceptionModel.")

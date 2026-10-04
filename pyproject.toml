@@ -14,6 +14,7 @@ dependencies = [
 
 [project.scripts]
 perception-infer = "slg_rl_lab.cli.inference:run_cli"
+perception-train = "slg_rl_lab.cli.train:run_cli"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13"]

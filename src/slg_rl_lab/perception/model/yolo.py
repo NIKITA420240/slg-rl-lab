@@ -14,7 +14,7 @@ class YOLOPerceptionModel(PerceptionModel):
         self.config = config
         self.model = YOLO(config.model_path)
 
-    def predict(self, image: np.ndarray):
+    def predict(self, image: np.ndarray, cfg: DictConfig):
         """
         Predicts the output based on the input image.
 
@@ -32,8 +32,19 @@ class YOLOPerceptionModel(PerceptionModel):
         image_bgr = np.ascontiguousarray(image[..., ::-1])
         return self.model.predict(
             image_bgr,
-            device=self.config.device,
-            conf=self.config.confidence,
-            imgsz=self.config.image_size,
-            verbose=False,
+            device  = cfg.device,
+            conf    = self.config.confidence,
+            imgsz   = self.config.image_size,
+            verbose = False,
         )[0]
+    
+    def train(self, cfg: DictConfig):
+        return self.model.train(
+            data   = cfg.data,
+            epochs = cfg.epochs,
+            batch  = cfg.batch,
+            device = cfg.device,
+            imgsz  = self.config.image_size,
+            project = cfg.project,
+            name    = cfg.name,
+        )

@@ -1,0 +1,10 @@
+defaults:
+  - model: yolo
+  - _self_
+
+data: data/albion_detector/data.yaml
+epochs: 5
+batch: 32
+device: cpu
+project: outputs/training
+name: albion_yolo11n

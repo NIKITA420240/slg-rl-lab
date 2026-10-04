@@ -1,5 +1,4 @@
 name: yolo
 model_path: weight_model/yolo11n.pt
-device: cpu
 confidence: 0.25
 image_size: 640

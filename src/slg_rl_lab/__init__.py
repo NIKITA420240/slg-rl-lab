@@ -1,3 +1,3 @@
-__all__ = ["inference"]
+__all__ = ["inference", "train"]
 
-from .perception import inference
+from .perception import inference, train
