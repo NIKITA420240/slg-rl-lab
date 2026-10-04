@@ -1,3 +1,3 @@
-__all__ = ["inference", "train"]
+__all__ = ["inference", "live_inference", "train"]
 
-from .perception import inference, train
+from .perception import inference, live_inference, train

@@ -10,11 +10,14 @@ dependencies = [
     "omegaconf",
     "loguru",
     "pillow",
+    "mss>=10.2.0",
+    "pywin32; sys_platform == 'win32'",
 ]
 
 [project.scripts]
 perception-infer = "slg_rl_lab.cli.inference:run_cli"
 perception-train = "slg_rl_lab.cli.train:run_cli"
+perception-live = "slg_rl_lab.cli.live:run_cli"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13"]

@@ -1,0 +1,8 @@
+defaults:
+  - model: yolo
+  - _self_
+
+device: cpu
+
+capture:
+  window_title: Albion Online
