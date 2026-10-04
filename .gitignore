@@ -1,2 +1,9 @@
-.history
-data
+.history/
+data/
+__pycache__/
+.venv/
+.uv-cache/
+dist/
+outputs/
+runs/
+*.pt
